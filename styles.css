@@ -1,20 +1,51 @@
-#logoBar{
-  width: 30vw;
-  height: 100vh;
-}
 #siteLogo{
   width: 100%;
 }
 body {
-  display: flex;
+  padding: 20px;
 }
 #staffGallery{
-  width: 70vw;
-  display: inherit;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .galleryImage{
-  width: 100%;
-  height: auto;
-  height: 300px;
+  width: 200px;
+}
+/* my changes */
+body {
+  background-color: bisque;
+  color: red;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.card {
+  background-color:rgb(189, 177, 255);
+  border-radius: 10px;
+  border: solid black 1px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600.5px) {
+  main {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+  }
+  #logoBar{
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 600.5px) {
+  main {
+    flex-direction: row;
+    display: flex;
+    gap: 20px;
+  }
+  #logoBar{
+    width: 400px;
+  }
 }
