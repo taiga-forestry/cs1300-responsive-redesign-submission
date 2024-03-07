@@ -1,45 +1,146 @@
-  <!-- TO RUN IN BROWSER:
-    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
-    2. Right click html file and either run in default browser or another browser
-  -->
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
-    <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
-  </head>
+    <head>
+      <!-- meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="Tiger Ji's Word Hippo Redesign Submission Website">
+	    <meta name="keywords" content="Tiger Ji, Brown University">
+        <title> Tiger Ji's Word Hippo Redesign Submission Website</title>
 
-  <!-- page content goes into <body> -->
-  <body>
-    <main>
-      <div id="logoBar">
-        <h1>Welcome to 100 Acre Wood!</h1>
-        <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-        <h3>We're glad you're here :D</h3>
-      </div>
-      <div id="staffGallery">
-        <div class="card">
-          <p> Eeyore-Eh </p>
-          <img class="galleryImage" src="./assets/Eeyore-Eh.png" alt="pic of Eeyore-Eh"/>
-        </div>
-        <div class="card">
-          <p> Eeyore-Zz </p>
-          <img class="galleryImage" src="./assets/Eeyore-Zz.png" alt="pic of EeyoreZz"/>
-        </div>
-        <div class="card">
-          <p> Kanga-Roo </p>
-          <img class="galleryImage" src="./assets/Kanga-Roo.png" alt="pic of Kanga-Roo"/>
-        </div>
-        <div class="card">
-          <p> Owl-Phone </p>
-          <img class="galleryImage" src="./assets/Owl-Phone.png" alt="pic of Owl-Phone"/>
-        </div>
-      </div>
-    </main>
-  </body>
+        <!-- personal styles and google fonts + icons -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+        </style>
 
+        <!-- personal scripts, fontawesome, and jquery -->
+        <script src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/35850cf6ad.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body class="column">
+      <main class="column">
+        <h1> Redesigning Word Hippo's Website </h1>
+
+        <section class="column">
+          <h2> Context </h2>
+          <p>
+            In CSCI 1300, one of our assignments is to redesign a currently existing webpage to be more responsive, accessible, and usable overall.
+            I chose <a href="https://www.wordhippo.com/" target="_blank"> Word Hippo</a> because it’s a site that I use a lot when writing essays, emails, etc. and I’ve always been curious about how
+            well-designed its interface was with respect to these categories.
+          </p> 
+          <img id="hippo" src="assets/index_hippo_logo.png" width="175px"/>  
+        </section>
+  
+        <section class="column">
+          <h2> Part 1: Identifying Usability Problems </h2>
+          <p> After a bit of tinkering with the site, I identified the following issues: </p>
+          <div id="issues" class="row">
+            <div>
+              <h3> Usability </h3>
+              <ul>
+                <li> Arrow icons + other buttons are ambiguous/unintuitive </li>
+                <li> Issues when shrinking the window (e.g. to split screen Word Hippo and Gmail) </li>
+                <li> "Contexts" dropdown does not appear to be interactable </li>
+                <li> Search bar is small, and other search bars clutter the site </li>
+              </ul>
+            </div>
+  
+            <div>
+              <h3> Accessibility </h3>
+              <ul>
+                <li> Many missing form labels, so navigating with a screen reader is more challenging </li>
+                <li> Lots of other miscellaneous issues (e.g. extraneous tab indexes, lack of page regions), which complicate keyboard navigation </li>
+                <li> Less importantly, but all Hippos lack alt texts! </li>
+              </ul>
+            </div>
+          </div>
+  
+          <p> After identifying these issues, I began to roughly plan out possible redesigns to address them. </p>
+        </section>
+  
+        <section class="column">
+          <h2> Part 2: Starting the Visual Redesign </h2>
+          <p> The first step to any redesign is to come up with as many ideas as possible, then consolidate them into a final rough sketch: </p>
+  
+          <div id="sketches" class="row">
+            <div>
+              <h3> Initial Sketches </h3>
+              <img class="sketch" src="assets/sketches.png" width="500px" height="575px"/>
+            </div>
+  
+            <div>
+              <h3> Final Sketch </h3>
+              <img class="sketch" src="assets/final-sketch.png" width="500px" height="575px"/>
+            </div>
+          </div>
+  
+          <p> Then, I developed some low fidelity wireframes for this final sketch for various screen sizes, intentionally focusing on the usability issues identified earlier: </p>
+  
+          <div id="sketches" class="row">
+            <div>
+              <h3> Laptop </h3>
+              <img class="sketch" src="assets/lofi-laptop.png" width="500px"/>
+            </div>
+  
+            <div>
+              <h3> Tablet </h3>
+              <img class="sketch" src="assets/lofi-tablet.png" width="375px"/>
+            </div>
+
+            <div>
+              <h3> Phone </h3>
+              <img class="sketch" src="assets/lofi-phone.png" width="200px"/>
+            </div>
+          </div>
+        </section>
+
+        <section class="column">
+          <h2> Part 3: Finalizing the Responsive Redesign </h2>
+          <p> Lastly, I polished up some high-fidelity wireframes based off of the previous iterations: </p>
+
+          <div id="sketches" class="row">
+            <div>
+              <h3> Laptop </h3>
+              <img class="sketch" src="assets/hifi-laptop.png" width="500px"/>
+            </div>
+  
+            <div>
+              <h3> Tablet </h3>
+              <img class="sketch" src="assets/hifi-tablet.png" width="375px"/>
+            </div>
+
+            <div>
+              <h3> Phone </h3>
+              <img class="sketch" src="assets/hifi-phone.png" width="200px"/>
+            </div>
+          </div>
+
+          <p> along with a basic style guide outlining the fonts, colors, and components used in the site: </p>
+          <img id="style-guide" src="assets/style-guide.png" width="600px"/>
+
+          <p> which leads to my final <a href="https://taiga-forestry.github.io/cs1300-responsive-redesign" target="_blank"> Word Hippo redesign</a>! </p>
+
+          <div id="sketches" class="row">
+            <div>
+              <h3> Before </h3>
+              <img class="sketch" src="assets/before.png" width="600px"/>
+            </div>
+
+            <div>
+              <h3> After </h3>
+              <img class="sketch" src="assets/after.png" width="600px"/>
+
+            </div>
+          </div>
+        </section>
+      </main>
+    </body>
 </html>
+
+
